@@ -62,7 +62,6 @@ function GS.currentState()
   return current
 end
 
-
 function GS.switch(to, ...)
   assert(to, "Missing argument: Gamestate to switch to")
 
@@ -72,7 +71,12 @@ function GS.switch(to, ...)
     assert(to, "Failed loading gamestate " .. name)
   end
 
-  current:leave()
+  -- If we're pausing while on a floorspace, don't call 'leave' on that floorspace
+  -- so our position is remembered
+  if to.name ~= 'pause' and current.name ~= 'floorspace' then
+    current:leave()
+  end
+
   local pre = current
   to:init()
   to.init = __NULL__

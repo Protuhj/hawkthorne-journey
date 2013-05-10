@@ -9,6 +9,7 @@ local VerticalParticles = require "verticalparticles"
 local Timer = require 'vendor/timer'
 local Player = require 'player'
 
+state.name = 'pause'
 
 function state:init()
     VerticalParticles.init()

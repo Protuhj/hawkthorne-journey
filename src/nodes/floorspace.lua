@@ -112,7 +112,9 @@ function Floorspace.new(node, level)
     return floorspace
 end
 
-function Floorspace:enter()
+function Floorspace:enter( previous )
+    -- If we're returning from a pause, ignore this call, everything is already set up
+    if previous.name == 'pause' then return end
     if self.node.properties.primary == 'true' then
         Floorspaces:setPrimary( self )
         local player = self.level.player
