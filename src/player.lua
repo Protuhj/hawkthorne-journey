@@ -699,7 +699,9 @@ function Player:setSpriteStates(presetName)
     --gaze_state  : pressing up
     --jump_state  : pressing jump button
     --idle_state  : standing around
-    self.previous_state_set = self.current_state_set or 'default'
+    if presetName ~= self.current_state_set then
+        self.previous_state_set = self.current_state_set or 'default'
+    end
     self.current_state_set = presetName
 
     local sprite_states = self:getSpriteStates()
