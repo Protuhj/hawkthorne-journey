@@ -8,6 +8,7 @@
 -- Creates a new sword object
 -- @return the sword object created
 return{
+    itemID = 'item_31',
     hand_x = 1,
     hand_y = 41,
     frameAmt = 8,

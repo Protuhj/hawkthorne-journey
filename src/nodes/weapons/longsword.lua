@@ -7,6 +7,7 @@
 -- Creates a new longsword object
 -- @return the longsword object created
 return {
+    itemID = 'item_25',
     hand_x = 9,
     hand_y = 40,
     frameAmt = 3,

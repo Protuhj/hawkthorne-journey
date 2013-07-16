@@ -2,6 +2,7 @@ local game = require 'game'
 return{
     name = 'arrow',
     type = 'projectile',
+    itemID = 'item_18',
     friction = 1,
     width = 27,
     height = 7,

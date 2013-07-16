@@ -8,6 +8,7 @@
 -- Creates a new mace object
 -- @return the mace object created
 return {
+    itemID = 'item_26',
     hand_x = 9,
     hand_y = 40,
     frameAmt = 3,

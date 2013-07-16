@@ -17,9 +17,14 @@ Consumable.__index = Consumable
 function Consumable.new(node, collider)
     local consumable = {}
     setmetatable(consumable, Consumable)
+    consumable.props = require( 'nodes/consumables/' .. node.name )
     consumable.name = node.name
     consumable.type = 'consumable'
-    consumable.image = love.graphics.newImage('images/consumables/'..node.name..'.png')
+    if consumable.props.nodeImage then
+        assert( love.filesystem.exists( consumable.props.nodeImage ),
+            'Image for node: ' .. node.name .. ' doesn\'t exist!' )
+    end
+    consumable.image = love.graphics.newImage( consumable.props.nodeImage or ('images/consumables/' .. node.name .. '.png') )
     consumable.image_q = love.graphics.newQuad( 0, 0, 24, 24, consumable.image:getWidth(),consumable.image:getHeight() )
     consumable.foreground = node.properties.foreground
     consumable.collider = collider
@@ -53,7 +58,7 @@ end
 function Consumable:keypressed( button, player )
     if button ~= 'INTERACT' then return end
 
-    local itemNode = require( 'items/consumables/' .. self.name )
+    local itemNode = Item.factory( self.props.itemID )
     itemNode.type = 'consumable'
     local item = Item.new(itemNode)
     if player.inventory:addItem(item) then

@@ -6,7 +6,7 @@
 local GS = require 'vendor/gamestate'
 local Weapon = require 'nodes/weapon'
 local rangedWeapon = require 'nodes/rangedWeapon'
-
+local ItemIDs      = require 'items/item_ids'
 local Item = {}
 Item.__index = Item
 Item.isItem = true
@@ -178,8 +178,8 @@ function Item:mergible(otherItem)
 end
 
 ---
--- Merges the two knives
--- @param otherItem the knife to merge with.
+-- Merges stackable items
+-- @param otherItem the Item to merge with.
 -- @returns true if the item could be completely merged, false if it could not be merged or could only be partially merged.
 function Item:merge(otherItem)
     if self.quantity + otherItem.quantity <= self.MaxItems then 
@@ -190,6 +190,14 @@ function Item:merge(otherItem)
         self.quantity = self.MaxItems
         return false
     end
+end
+
+function Item.factory(itemID)
+    assert( itemID, 'itemID cannot be nil!' )
+    assert( ItemIDs[itemID], "Item.factory() passed an invalid itemID: " .. itemID )
+    assert( love.filesystem.exists( ItemIDs[itemID] .. '.lua' ),
+        "Item.factory() file doesn't exist for itemID: " .. itemID .. " path: " .. ItemIDs[itemID] )
+    return require( ItemIDs[itemID] );
 end
 
 return Item

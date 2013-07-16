@@ -1,4 +1,5 @@
 return {
+    itemID = 'item_21',
     hand_x = 20,
     hand_y = 14,
     frameAmt = 3,

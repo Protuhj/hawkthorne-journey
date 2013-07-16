@@ -2,6 +2,7 @@ local game = require 'game'
 return{
     name = 'icicle',
     type = 'projectile',
+    itemID = 'item_24',
     friction = 1, --0.01 * game.step,
     width = 16,
     height = 16,

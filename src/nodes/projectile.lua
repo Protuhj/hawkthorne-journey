@@ -172,8 +172,8 @@ function Projectile:keypressed( button, player)
 
     if button == 'INTERACT' then
         --the following invokes the constructor of the specific item's class
-        local Item = require 'items/item'
-        local itemNode = require ('items/weapons/'..self.name)
+        local Item = require( 'items/item' )
+        local itemNode = Item.factory( self.props.itemID )
         local item = Item.new(itemNode)
         if player.inventory:addItem(item) then
             if self.bb then

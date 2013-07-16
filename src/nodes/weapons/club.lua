@@ -7,6 +7,7 @@
 -- Creates a new club object
 -- @return the club object created
 return{
+    itemID = 'item_22',
     hand_x = 24,
     hand_y = 30,
     frameAmt = 3,

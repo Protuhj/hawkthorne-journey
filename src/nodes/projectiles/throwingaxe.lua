@@ -2,6 +2,7 @@ local game = require 'game'
 return{
     name = 'throwingaxe',
     type = 'projectile',
+    itemID = 'item_29',
     friction = 0.01 * game.step,
     width = 16,
     height = 16,

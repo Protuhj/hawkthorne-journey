@@ -8,6 +8,7 @@
 -- Creates a new mallet object
 -- @return the mallet object created
 return{
+    itemID = 'item_27',
     hand_x = 5,
     hand_y = 16,
     frameAmt = 3,

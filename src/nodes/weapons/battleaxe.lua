@@ -8,6 +8,7 @@
 -- Creates a new battleaxe object
 -- @return the battleaxe object created
 return {
+    itemID = 'item_19',
     hand_x = 9,
     hand_y = 40,
     frameAmt = 3,
