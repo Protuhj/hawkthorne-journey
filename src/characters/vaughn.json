@@ -6,8 +6,15 @@
     }
   },
   "costumes": [
-    {"category": "base", "name": "Vaughn", "sheet": "base", "ow": 1}
+    {"category": "base", "name": "Vaughn Miller", "sheet": "base", "ow": 1}
   ], 
   "name": "vaughn",
+  "bbox": {
+    "width": 14,
+    "height": 39,
+    "duck_height": 20,
+    "x": 17,
+    "y": 9
+  },
   "offset": 8
 }

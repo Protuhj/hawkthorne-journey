@@ -8,68 +8,102 @@
   <property name="title" value="Class Hallway 2"/>
  </properties>
  <tileset firstgid="1" name="greendale-hallways" tilewidth="24" tileheight="24">
-  <image source="../images/tilesets/greendale-hallways.png" width="576" height="480"/>
+  <image source="../images/tilesets/greendale-hallways.png" width="576" height="600"/>
+ </tileset>
+ <tileset firstgid="601" name="collisions" tilewidth="24" tileheight="24">
+  <image source="../images/tilesets/collisions.png" width="632" height="512"/>
  </tileset>
  <layer name="Tile Layer 1" width="92" height="14">
   <data encoding="base64" compression="zlib">
-   eJztlr0NwjAQhW0CUxA2gAIEPS0sATUdNLAFbAFDgJQB+JVgA3634EVQRKf4ZCeRkdA96Stsv8s9vSpaqa4WvFFSSgleiQR/KJFIJCpIwRfRR3twcPAH+OkoawsfIVYdcw0yewQny91NzLaY3Wu8bSyyFa0t2Fl67+BB7sbIPDHkruI+zNh3mp7gZZEzVg97+8zuM94uP+j7Cm4Z5gbIOgRzsMiZm+u7Rs6hw3dN3lECzpvmc83gkovzTtHxDCzBytA37cok2nclQYec2+TMYfIme+S8aT7XDC658nppVyZo34Lwj2jBK2+kW31/
+   eJztlT0KwkAQhXeNnsLYG9BC0T4p9RJa22mjpTfQW+ghFDyAv6A38PcWPsFAGLJhN4YNyDz4ip2d2Zl5KSKF8CVjjYIQgrHKhrGHYLFYrIzkfMlCDfyAmzKjx3LSHhwM8h3sW9TY2SF8VENdndQewUmzdwe13YTeK9ytc/geW7DTzL2DB4kNMfNIMXcZcTel33F6gpfGnDo6Y65LDn5fwS1FXQ+z9sEMzH+cO8nvCjm7Bu96Qky9mPggQqiqZp4q10QmO4S9xvB4AhZgqfCbeqUS9bsUoU3OLXJOIoDfQUw86mMY8zXzVLkmmOxg0ot6pYL6zTD/iGSs8gbMi39G
   </data>
  </layer>
  <layer name="Tile Layer 2" width="92" height="14">
   <data encoding="base64" compression="zlib">
-   eJztlk0OgjAUhB8H0DOx1XAJlY0/F1A0wSPo0pVH4VK6dootaWqBAg025H3JpEAGOp2EpkQMwzB+OBPFQpkcddme1SkQbxForupa9b7RrrVnztje/4O3GHGuQV5btx37DsGbjzhXL+8SGRfQVPreRkQ7aA8domByEToWXZesJ9T3BXsKFKsxkFyi44qVY98J8qdSibFXDsn6gt6O3pbvir6FSI2295H96XsNbV7V9wm5ju59UyqVGHvlkKwz/PfzyM2rc/315qanpm/va2jzqr7vmPMG4cwizoalSI6Zcd+kNq9Ok1enR4a8a66xvA/6/nPEMAzjiQ9J6aN8
+   eJztVksOgjAUfBxAryRbDZcQ2fi5gKIJHkGXrjyKd9Er6EYXTrE1DRZaoMGGdJJJP5m284bQlMjDw8PDDrZEIWPKW5mquTI6or046uvbF7nPpL40ZwzV+j9oLx2e1UqryrZm3i5osw7PaqSdwOMY7Eve84BoAS7BVeCML0LGLOsccY/y3uFOAUPRdunriu97C9TaWBpPDfOO4D/hjAp3ZRuvd/BhqNXsy/JmJNGq1sP72XYNDE9k/dLkvYGvtXnelHBGhbuyjdcBPA4VPnX77n+1WVFTkrf1GnRakfcRZx5AvFnY2zAn8TYtjKsoa1V6GVX7ymjgIavyZVrDqGa9JtoTff458vDw8LCEN+SdpwE=
   </data>
  </layer>
  <layer name="Tile Layer 3" width="92" height="14">
   <data encoding="base64" compression="zlib">
-   eJztlElKA0EYhat37hwPkAh6BY2gF8hCjIKeoKMrvYCxcwbjEDyBQ/QMDugZ1KDHcFz4GqqwKP+aQnUrUg8+Ut398tVfHQhjMTH/O4u/PUDg4DzZXztTPpPp+VDB+1cK6pbhCeVralx1D4drtxK427Q8rzP39xNqLttMqqvI+Ph9umV4BvVVA7p84+P36ZbhGdS3bfgPp1xLCWMNsAxWEs/NHPwhukV7pnDu6cTuq6IzyXvr/J78vmvgGJzw61mNJ1Ou38A70esR+8rR+anI3RfwKl2vwr3m+NsLzw5o8888H+DTcZZ57LWQ/JzrHFyAU3AGaujM8V5D47oEV8q9VFpvgK40bwuMwjmmOW+m7Esl1T8iu8NwjSTfv+cm1luW992T1imfS5wlzzi+P6E4uoxOSzPXLbgD1+DGMMsBOOTre/DA1zNEt8PZ5eyDPYNbhHLJET41lLsjITqq3+ZTHVTayv7ymVVfvv8TeAaPoK/xHxn2i4mJifHNFwOVQ6Y=
+   eJztlFtKw0AYhScFxTfv+tpWdAtaQTfQB7EKuoJUn3QD1nQN1ktxBV6qa9CKrsELioK6BG29nsAM/owzyUSSKjIHPjpJTs9/ZkrKmJXV/9bUbxeIWdiP99f25HcKet6R8Px0Qt5W5MSVV9Rk5SNkmHrTMXuLIc/zzPx84uoV1knOCtO9w9gDeHQiBEfI/4m3FTlJ5JlkveGc38GHPW8jrQT8h6uypnGuBTADZkF/irEBMJiKOFiTT3WL/DvHzBvXTBMNo9OIQa8MPFnuW+D36HnnwA7Y5ddjmhxPum6AJrnOgiFQU8yl8vMzAX0b+E7T+e59As/ENwfPvOH7Jfa0Csr809cLeCW+oF4TmDVJegkdgEOwB/ZBDp5x7itoso7AsXTPJetFUCV9S6AbmT2a/XrSXJVc/SOltxNZXc7X77mE9XLIedfI2uW9xF589eL7fVJGlalV0vQ6BWegDk74/Ta89+3Su78Jtvj6HFzw9agit8JZ42yAdU0vKlUWlciTpcquEIRHzg/LkzNUKkvz6Z7lPH/+NbgBl+BKk78dMM/Kysoqqj4BWVpN8A==
+  </data>
+ </layer>
+ <layer name="collision" width="92" height="14">
+  <data encoding="base64" compression="zlib">
+   eJzt0LsJACAMAFHJli5h4xKaqbUQ7PxgsNB7cF2IEi/OeboWAAAAgPdE6VnM/UDrDVIrG95DN/bpwvuzfSs7Tv44mg9CNwNeVgBc7VV8
   </data>
  </layer>
  <objectgroup name="nodes" width="92" height="14">
-  <object name="main" type="door" x="2159" y="226" width="48" height="48">
+  <object name="main" type="door" x="2160" y="216" width="48" height="60">
    <properties>
     <property name="level" value="class-hallway"/>
     <property name="sound" value="false"/>
     <property name="to" value="classHallway2"/>
    </properties>
   </object>
-  <object type="info" x="2019" y="207" width="41" height="66">
+  <object type="info" x="2019" y="207" width="41" height="58">
    <properties>
-    <property name="info" value="vending machines - easier to get into than out of."/>
+    <property name="info" value="Vending machines - getting in is easier than getting out."/>
    </properties>
   </object>
-  <object type="info" x="1974" y="207" width="35" height="66">
+  <object type="info" x="1974" y="217" width="35" height="47">
    <properties>
-    <property name="info" value="yummie hot water with just | a touch of coffee flavor"/>
+    <property name="info" value="Yummy hot water, with just a touch of coffee flavour."/>
    </properties>
   </object>
-  <object type="info" x="1947" y="216" width="14" height="56">
+  <object type="info" x="1947" y="216" width="9" height="46">
    <properties>
-    <property name="info" value="a note on the extinguisher reads ... | I.O.U. one recharge - the dean"/>
+    <property name="info" value="A note on the extinguisher reads ... | I.O.U. one recharge - the Dean"/>
    </properties>
   </object>
-  <object type="firealarm" x="1896" y="216" width="24" height="72"/>
-  <object type="firealarm" x="1416" y="216" width="24" height="72"/>
-  <object type="firealarm" x="984" y="216" width="24" height="72"/>
-  <object type="firealarm" x="720" y="216" width="24" height="72"/>
-  <object type="firealarm" x="144" y="216" width="24" height="72"/>
- </objectgroup>
- <objectgroup name="block" width="92" height="14">
-  <object x="-1" y="272" width="2215" height="39"/>
- </objectgroup>
- <objectgroup color="#55557f" name="platform" width="92" height="14">
-  <object type="floor" x="75" y="195" width="42" height="9"/>
-  <object type="floor" x="266" y="253" width="92" height="6"/>
-  <object type="floor" x="625" y="217" width="70" height="7"/>
-  <object type="floor" x="793" y="252" width="45" height="5"/>
-  <object type="floor" x="865" y="217" width="68" height="6"/>
-  <object type="floor" x="1057" y="252" width="68" height="6"/>
-  <object type="floor" x="1274" y="253" width="43" height="6"/>
-  <object type="floor" x="1465" y="253" width="69" height="5"/>
-  <object type="floor" x="1777" y="253" width="43" height="5"/>
-  <object type="floor" x="1973" y="200" width="37" height="6"/>
-  <object type="floor" x="2020" y="200" width="40" height="6"/>
-  <object type="floor" x="2066" y="254" width="45" height="5"/>
-  <object type="floor" x="1830" y="242" width="13" height="5"/>
+  <object type="firealarm" x="1896" y="216" width="24" height="48"/>
+  <object type="firealarm" x="1416" y="216" width="24" height="48"/>
+  <object type="firealarm" x="984" y="216" width="24" height="48"/>
+  <object type="firealarm" x="720" y="216" width="24" height="48"/>
+  <object type="firealarm" x="144" y="216" width="24" height="48"/>
+  <object type="info" x="1920" y="216" width="24" height="48">
+   <properties>
+    <property name="info" value="This door is locked."/>
+   </properties>
+  </object>
+  <object type="info" x="1392" y="216" width="24" height="48">
+   <properties>
+    <property name="info" value="This door is locked."/>
+   </properties>
+  </object>
+  <object type="info" x="216" y="216" width="24" height="48">
+   <properties>
+    <property name="info" value="This door is locked."/>
+   </properties>
+  </object>
+  <object type="info" x="0" y="144" width="48" height="120">
+   <properties>
+    <property name="info" value="This stairwell is out of use due to a mild mould issue."/>
+   </properties>
+  </object>
+  <object name="potteryclass" type="door" x="480" y="216" width="48" height="60">
+   <properties>
+    <property name="level" value="potteryclass"/>
+    <property name="to" value="main"/>
+   </properties>
+  </object>
+  <object name="biology" type="door" x="1656" y="216" width="24" height="60">
+   <properties>
+    <property name="level" value="greendale-biology"/>
+    <property name="to" value="main"/>
+   </properties>
+  </object>
+  <object name="anthroright" type="door" x="1008" y="216" width="24" height="60">
+   <properties>
+    <property name="level" value="greendale-anthropology"/>
+    <property name="to" value="rightdoor"/>
+   </properties>
+  </object>
+  <object name="anthroleft" type="door" x="744" y="216" width="24" height="60">
+   <properties>
+    <property name="level" value="greendale-anthropology"/>
+    <property name="to" value="leftdoor"/>
+   </properties>
+  </object>
  </objectgroup>
 </map>

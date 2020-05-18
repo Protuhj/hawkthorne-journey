@@ -5,7 +5,11 @@
 -----------------------------------------------
 
 return{
-    name = 'torch',
-    type = 'weapon',
-    subtype = 'melee',
+  name = 'torch',
+  description = 'Torch',
+  type = 'weapon',
+  subtype = 'melee',
+  damage = '2',
+  special_damage = 'fire= 3',
+  info = 'a standard torch',
 }

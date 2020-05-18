@@ -10,6 +10,7 @@
   "MUSIC VOLUME": "music volume",
   "SFX VOLUME": "sfx volume",
   "SHOW FPS": "show fps",
-  "RESET SETTINGS AND EXIT": "reset settings & exit",
+  "SEND PLAY DATA": "send play data",
+  "RESET SETTINGS": "reset settings",
   "RESET + EXIT": "RESET + EXIT"
 }

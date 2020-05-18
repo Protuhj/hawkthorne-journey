@@ -5,7 +5,11 @@
 -----------------------------------------------
 
 return{
-    name = 'mace',
-    type = 'weapon',
-    subtype = 'melee',
+  name = 'mace',
+  description = 'Mace',
+  type = 'weapon',
+  subtype = 'melee',
+  damage = '7',
+  special_damage = 'blunt= 2, stab= 1',
+  info = 'a heavy weapon useful for bashing and smashing',
 }

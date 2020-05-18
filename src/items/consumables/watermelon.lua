@@ -1,8 +1,9 @@
 return{
-    name = "watermelon",
-    type = "consumable",
-    MAX_ITEMS = 10,
-    use = function( consumable, player )
-    	player.health = (player.health + player.max_health)*0.5
-	end
+  name = "watermelon",
+  description = "Watermelon",
+  type = "consumable",
+  info="a refreshing snack",
+  MAX_ITEMS = 50,
+  width = 24,
+  consumable = {heal = 0.5},
 }

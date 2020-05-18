@@ -40,7 +40,7 @@ end
 function Application:errhand(msg)
   msg = tostring(msg)
 
-  if not love.graphics or not love.event or not love.graphics.isCreated() then
+  if not love.graphics or not love.event or not love.window.isCreated() then
     return
   end
 
@@ -59,6 +59,7 @@ function Application:errhand(msg)
 
   local function draw()
     love.graphics.clear()
+    love.graphics.origin()
     love.graphics.printf(p, 70, 70, love.graphics.getWidth() - 70)
     love.graphics.present()
   end
@@ -85,7 +86,7 @@ end
 function Application:releaseerrhand(msg)
   print("An error has occurred, the game has been stopped.")
 
-  if not love.graphics or not love.event or not love.graphics.isCreated() then
+  if not love.graphics or not love.event or not love.window.isCreated() then
     return
   end
 
@@ -112,6 +113,7 @@ function Application:releaseerrhand(msg)
 
   local function draw()
     love.graphics.clear()
+    love.graphics.origin()
     love.graphics.printf(p, 70, 70, love.graphics.getWidth() - 70)
     love.graphics.present()
   end

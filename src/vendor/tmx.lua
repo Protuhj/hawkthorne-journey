@@ -56,7 +56,7 @@ function tmx.load(level)
   map.layers = {}
   
   for _, tilelayer in ipairs(level.tilelayers) do
-    if tilelayer.tiles then
+    if tilelayer.name ~= "collision" and tilelayer.tiles then
       layer = tmx.getParallaxLayer( map, tilelayer, level )
       for _, tile in ipairs(tilelayer.tiles) do
         if tile then
@@ -110,7 +110,7 @@ function tmx.load(level)
 
           layer = tmx.getParallaxLayer( map, tilelayer )
 
-          layer.batch:addq(tiles[tile.id], 
+          layer.batch:add(tiles[tile.id], 
                          x * tilewidth + (tilewidth / 2),
                          y * tileheight + (tileheight / 2),
                          tile.flipDiagonal and math.pi * 1.5 or 0, --rotation
@@ -120,7 +120,7 @@ function tmx.load(level)
     end
   end
 
-  table.sort( map.layers, function(a,b) return a.parallax < b.parallax end )
+  table.sort(map.layers, function(a,b) return a.parallax < b.parallax end)
   
   return map
 end

@@ -13,10 +13,6 @@ local camera = require 'camera'
 
 local NAMESPACE = 'cuttriggers.'
 
-local head = love.graphics.newImage('images/cornelius_head.png')
-local g = anim8.newGrid(144, 192, head:getWidth(), head:getHeight())
-local talking = anim8.newAnimation('loop', g('2,1', '3,1', '1,1'), 0.2)
-
 local timeline = {
   opacity=0
 }
@@ -31,7 +27,6 @@ SceneTrigger:include(machine.mixin({
     {name = 'stop', from = 'playing', to = 'finished'},
   }
 }))
-
 
 function SceneTrigger:initialize(node, collider, layer)
   assert(node.properties.cutscene, "A cutscene to trigger is required")
@@ -56,7 +51,6 @@ function SceneTrigger:initialize(node, collider, layer)
   collider:setPassive(self.bb)
 end
 
-
 function SceneTrigger:update(dt, player)
   if not self:is('playing') then
     return
@@ -64,14 +58,12 @@ function SceneTrigger:update(dt, player)
   self.scene:update(dt, player)
 end
 
-
 function SceneTrigger:keypressed(button)
   if not self:is('playing') then
     return false
   end
   return self.scene:keypressed(button)
 end
-
 
 function SceneTrigger:collide(node, dt, mtv_x, mtv_y)
   if node and node.character and self:can('start') then
@@ -106,4 +98,3 @@ function SceneTrigger:draw(player)
 end
 
 return SceneTrigger
-

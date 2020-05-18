@@ -8,8 +8,12 @@ import logging
 def create_conf_json(version):
     conf = json.load(open('src/config.json'))
 
+    if os.environ.get('TRAVIS_BRANCH', '') != 'release':
+        return
+
     conf.update({
         "iteration": version,
+        "feedurl": "http://files.projecthawkthorne.com/appcast.json",
     })
 
     with open('src/config.json', 'w') as f:
@@ -31,7 +35,10 @@ def create_conf_lua(version):
 
 
 def main():
-    v = version.next_version()
+    if os.environ.get('TRAVIS_BRANCH', '') == 'release':
+        v = version.next_version()
+    else:
+        v = "0.0.0"
 
     logging.info("Creating osx/Info.plist")
     create_info_plist(v)

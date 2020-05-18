@@ -4,39 +4,47 @@
   <property name="soundtrack" value="greendale-alt"/>
  </properties>
  <tileset firstgid="1" name="bathroom" tilewidth="24" tileheight="24">
-  <image source="../images/tilesets/bathroom.png" width="240" height="96"/>
+  <image source="../images/tilesets/bathroom.png" width="240" height="240"/>
+ </tileset>
+ <tileset firstgid="101" name="collisions" tilewidth="24" tileheight="24">
+  <image source="../images/tilesets/collisions.png" width="632" height="512"/>
  </tileset>
  <layer name="Background" width="22" height="14">
   <data encoding="base64" compression="zlib">
-   eJxjYBgF2AAjA8MBcjAhc5nIxIQAG5l41NyBNZeZTEwIMJKJhzoAAF3KDIc=
+   eJxjZGA4wEgDzMTAwEALzDaKR/EophtmphFmpBEGAEhSFkM=
   </data>
  </layer>
  <layer name="Wall features 1" width="22" height="14">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFwwEoMTAcgGFFJDY6RpcjxQ5xMuXwAX4amUtIL6nmKiFhRTQ+PrlRQF8AAFBcDs4=
+   eJxjYBhaQImB4QAyVkTjE8K41KPbI06iu4hVP2ruqLnEqlMhQb0SGlbEIoYPA9U3YBMfagAATf0YaQ==
   </data>
  </layer>
  <layer name="Wall features 2" width="22" height="14">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFAwH4qGweNxLmwaEGKJ7AjaaWGMABpcXQ9MIwUDyBHDfLoPElyDEEDYgCsRoQC0D5XEhYGAmDgAgSJgSkgVgSiKWgfE4kLIuEQUAOCY8C+gIASzwDyw==
+   eJxjYBi6gI9y/Q0wNjcS5qHQXAaIGQ3caGJiEPMbYJiQPTAzkLEYkptxATE0PeSYwYHEliCkGAfApk+GTLMIASE6mMsPpZWRxJDZpAA1IBaFsgWgNBcaBgFhNAwCImgYF5CC0pxoGARk0TAIyKFhadK9NeAAAMmjCIw=
+  </data>
+ </layer>
+ <layer name="collision" width="22" height="14">
+  <data encoding="base64" compression="zlib">
+   eJxLZWBgSKUBHgWjYBRQDmYAcT0UTyfTjGlAPAWKp5Kot4pGmFYAAHx6F6s=
   </data>
  </layer>
  <objectgroup name="nodes" width="22" height="14">
-  <object name="main" type="door" x="144" y="192" width="24" height="48">
+  <object name="main" type="door" x="120" y="240" width="24" height="60">
    <properties>
     <property name="level" value="borchert-hallway"/>
     <property name="to" value="bathroom-mens"/>
    </properties>
   </object>
- </objectgroup>
- <objectgroup name="block" width="22" height="14">
-  <object x="96" y="240" width="336" height="24"/>
-  <object x="432" y="72" width="24" height="216"/>
-  <object x="72" y="72" width="24" height="216"/>
-  <object x="72" y="48" width="384" height="24"/>
- </objectgroup>
- <objectgroup name="platform" width="22" height="14">
-  <object type="floor" x="264" y="192" width="72" height="6"/>
-  <object type="floor" x="192" y="220" width="72" height="7"/>
+  <object type="firealarm" x="48" y="216" width="24" height="72"/>
+  <object name="notstarburns" type="npc" x="360" y="233" width="22" height="14"/>
+  <object name="baggle" type="spawn" x="144" y="264" width="24" height="24">
+   <properties>
+    <property name="nodeType" value="consumable"/>
+    <property name="sound" value="false"/>
+    <property name="spawnType" value="keypress"/>
+    <property name="sprite" value="wastebin"/>
+   </properties>
+  </object>
  </objectgroup>
 </map>
